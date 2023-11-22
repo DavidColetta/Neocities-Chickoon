@@ -90,15 +90,17 @@ h2 {
   background-color: rgba(110, 170, 207, 0.9);
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
+  font-weight: 600;
 }
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 6px 8px 6px 8px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: max(18px, 2vw);
   color: #111;
   display: block;
+  overflow-wrap: break-word;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -106,7 +108,16 @@ h2 {
   color: #f1f1f1;
 }
 
-@media screen and (max-height: 450px) {
+/* @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+} */
+
+.mobile-display{display:none}
+.desktop-display{display:block}
+@media (max-width: 500px) {
+  .desktop-display {display:none}
+  .mobile-display {display:block}
+  #welcome {width: 300px;}
+  .sidenav {width: 30px; padding-top: 6px; line-height: 1;}
 }
